@@ -68,4 +68,48 @@
         </ul>
     </div>
 </body>
+
+    <div class="section">
+        <h2>7. Advanced Git</h2>
+        <ul>
+            <li><b>Interactive Rebase:</b> <code>git rebase -i HEAD~n</code> (edit last n commits)</li>
+            <li><b>Stash changes:</b> <code>git stash</code> (save changes temporarily)</li>
+            <li><b>Apply stash:</b> <code>git stash apply</code></li>
+            <li><b>Cherry-pick:</b> <code>git cherry-pick &lt;commit&gt;</code> (apply a specific commit)</li>
+            <li><b>Squash commits:</b> Use interactive rebase to squash multiple commits into one</li>
+            <li><b>Bisect:</b> <code>git bisect start</code> (find the commit that introduced a bug)</li>
+            <li><b>Tagging:</b> <code>git tag v1.0.0</code> (create a tag)</li>
+            <li><b>Show remote URLs:</b> <code>git remote -v</code></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Tips & Tricks</h2>
+        <ul>
+            <li><b>See what changed in last commit:</b> <code>git show</code></li>
+            <li><b>See changes before committing:</b> <code>git diff</code></li>
+            <li><b>See changes for staged files:</b> <code>git diff --cached</code></li>
+            <li><b>Remove untracked files:</b> <code>git clean -fd</code></li>
+            <li><b>Rename a branch:</b> <code>git branch -m new-name</code></li>
+            <li><b>Set upstream branch:</b> <code>git push -u origin branch-name</code></li>
+            <li><b>List all aliases:</b> <code>git config --get-regexp alias</code></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Git Cheatsheet</h2>
+        <pre>
+# Quick Reference
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git log --oneline --graph --all
+git diff branch1..branch2
+git reflog
+git blame &lt;file&gt;
+git shortlog -sn
+git archive -o latest.zip HEAD
+        </pre>
+    </div>
+</body>
+</body>
 </html>
