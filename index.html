@@ -5,19 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Guide</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; color: #222; }
-        h1, h2 { color: #2d6cdf; }
-        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
-        pre { background: #eee; padding: 1em; border-radius: 6px; overflow-x: auto; }
-        .section { margin-bottom: 2em; }
-        ul { margin-left: 1.5em; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 2rem;
+            background: linear-gradient(120deg, #f9f9f9 60%, #e3eaff 100%);
+            color: #222;
+        }
+        h1 {
+            color: #2d6cdf;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            color: #1a4a8a;
+            border-left: 5px solid #2d6cdf;
+            padding-left: 10px;
+            margin-top: 2em;
+        }
+        code {
+            background: #eaf1fb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        pre {
+            background: #eaf1fb;
+            padding: 1em;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 1em;
+        }
+        .section {
+            margin-bottom: 2em;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44,108,223,0.07);
+            padding: 1.5em 1.5em 1em 1.5em;
+        }
+        ul, ol {
+            margin-left: 1.5em;
+        }
+        .git-logo {
+            display: block;
+            margin: 0 auto 1.5em auto;
+            width: 120px;
+        }
+        .img-inline {
+            vertical-align: middle;
+            height: 1.2em;
+            margin-right: 0.3em;
+        }
+        .tip {
+            background: #e3f7e3;
+            border-left: 4px solid #4caf50;
+            padding: 0.7em 1em;
+            margin: 1em 0;
+            border-radius: 6px;
+        }
+        .cheat-img {
+            display: block;
+            margin: 1em auto;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,108,223,0.07);
+        }
+        a { color: #2d6cdf; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Octicons-mark-github.svg/120px-Octicons-mark-github.svg.png" alt="GitHub Logo" class="git-logo">
     <h1>Git Guide</h1>
     <div class="section">
         <h2>1. What is Git?</h2>
-        <p>Git is a distributed version control system that helps you track changes in your code and collaborate with others.</p>
+        <p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_GitHub.svg/32px-Logo_2013_GitHub.svg.png" alt="GitHub Icon" class="img-inline">
+            Git is a distributed version control system that helps you track changes in your code and collaborate with others.
+        </p>
+    </div>
+    <!-- .gitignore section will be inserted after section 5 -->
     </div>
     <div class="section">
         <h2>2. Common Git Commands</h2>
@@ -34,6 +100,8 @@
             <li><code>git pull</code> - Fetch and merge from remote</li>
             <li><code>git push</code> - Push changes to remote</li>
         </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Git-flow-feature-branch.png/400px-Git-flow-feature-branch.png" alt="Git Branching" class="cheat-img" style="max-width:400px;">
+        </ul>
     </div>
     <div class="section">
         <h2>3. Typical Workflow</h2>
@@ -43,6 +111,7 @@
             <li>Commit changes: <code>git commit -m "Describe your changes"</code></li>
             <li>Push to remote: <code>git push</code></li>
         </ol>
+    <div class="tip">Tip: Use <code>git status</code> often to see what’s going on!</div>
     </div>
     <div class="section">
         <h2>4. Working with Branches</h2>
@@ -51,6 +120,7 @@
             <li>Switch to branch: <code>git checkout feature-branch</code></li>
             <li>Merge branch: <code>git checkout main</code> then <code>git merge feature-branch</code></li>
         </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_branching.svg/500px-Git_branching.svg.png" alt="Git Branch Model" class="cheat-img" style="max-width:500px;">
     </div>
     <div class="section">
         <h2>5. Undoing Changes</h2>
@@ -59,9 +129,27 @@
             <li>Discard changes: <code>git checkout -- &lt;file&gt;</code></li>
             <li>Amend last commit: <code>git commit --amend</code></li>
         </ul>
+    <div class="tip">Trick: Use <code>git reflog</code> to recover lost commits!</div>
     </div>
     <div class="section">
-        <h2>6. Helpful Resources</h2>
+        <h2>6. Using .gitignore</h2>
+        <p>The <code>.gitignore</code> file tells Git which files or folders to ignore in a project. This is useful for excluding files like build output, logs, or sensitive information.</p>
+        <pre>
+# Example .gitignore
+node_modules/
+dist/
+*.log
+.env
+        </pre>
+        <ul>
+            <li>Create a file named <code>.gitignore</code> in your project root.</li>
+            <li>Add patterns for files/folders you want Git to ignore.</li>
+            <li>Common patterns: <code>node_modules/</code>, <code>*.log</code>, <code>.env</code></li>
+        </ul>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Git-ignore-icon.png/240px-Git-ignore-icon.png" alt="gitignore icon" class="cheat-img" style="max-width:180px;">
+    </div>
+    <div class="section">
+    <h2>7. Helpful Resources</h2>
         <ul>
             <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
             <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
@@ -70,7 +158,7 @@
 </body>
 
     <div class="section">
-        <h2>7. Advanced Git</h2>
+    <h2>8. Advanced Git</h2>
         <ul>
             <li><b>Interactive Rebase:</b> <code>git rebase -i HEAD~n</code> (edit last n commits)</li>
             <li><b>Stash changes:</b> <code>git stash</code> (save changes temporarily)</li>
@@ -81,10 +169,11 @@
             <li><b>Tagging:</b> <code>git tag v1.0.0</code> (create a tag)</li>
             <li><b>Show remote URLs:</b> <code>git remote -v</code></li>
         </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Git-cheat-sheet.svg/500px-Git-cheat-sheet.svg.png" alt="Git Advanced Cheat Sheet" class="cheat-img" style="max-width:500px;">
     </div>
 
     <div class="section">
-        <h2>8. Tips & Tricks</h2>
+    <h2>9. Tips & Tricks</h2>
         <ul>
             <li><b>See what changed in last commit:</b> <code>git show</code></li>
             <li><b>See changes before committing:</b> <code>git diff</code></li>
@@ -94,10 +183,11 @@
             <li><b>Set upstream branch:</b> <code>git push -u origin branch-name</code></li>
             <li><b>List all aliases:</b> <code>git config --get-regexp alias</code></li>
         </ul>
+    <div class="tip">Tip: Use <code>git log --oneline --graph --all</code> for a visual commit history!</div>
     </div>
 
     <div class="section">
-        <h2>9. Git Cheatsheet</h2>
+    <h2>10. Git Cheatsheet</h2>
         <pre>
 # Quick Reference
 git config --global user.name "Your Name"
@@ -109,6 +199,7 @@ git blame &lt;file&gt;
 git shortlog -sn
 git archive -o latest.zip HEAD
         </pre>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Git-cheat-sheet.svg/500px-Git-cheat-sheet.svg.png" alt="Git Cheatsheet" class="cheat-img" style="max-width:500px;">
     </div>
 </body>
 </body>
