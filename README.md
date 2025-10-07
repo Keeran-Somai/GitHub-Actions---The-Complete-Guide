@@ -7,20 +7,21 @@ Welcome to the Git Guide Project! This repository contains a comprehensive HTML 
 
 ## Table of Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [How to Use](#how-to-use)
-- [Project Structure](#project-structure)
-- [Common Git Commands](#common-git-commands)
-- [Branching Strategies](#branching-strategies)
-- [Undoing Changes](#undoing-changes)
-- [Using .gitignore](#using-gitignore)
-- [Advanced Workflows](#advanced-workflows)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [FAQ](#faq)
-- [Helpful Resources](#helpful-resources)
-- [License](#license)
+- [Git Guide Project](#git-guide-project)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [How to Use](#how-to-use)
+  - [Project Structure](#project-structure)
+  - [Common Git Commands](#common-git-commands)
+  - [Branching Strategies](#branching-strategies)
+  - [Undoing Changes](#undoing-changes)
+  - [Using .gitignore](#using-gitignore)
+  - [Advanced Workflows](#advanced-workflows)
+  - [Troubleshooting](#troubleshooting)
+  - [Contributing](#contributing)
+  - [FAQ](#faq)
+  - [Helpful Resources](#helpful-resources)
 
 ---
 
