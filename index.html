@@ -74,508 +74,228 @@
     </style>
 </head>
 <body>
-    <div class="git-logo" style="font-size:64px;text-align:center;">🐙</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 2rem;
+            background: linear-gradient(120deg, #f9f9f9 60%, #e3eaff 100%);
+            color: #222;
+        }
+        h1 {
+            color: #2d6cdf;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            color: #1a4a8a;
+            border-left: 5px solid #2d6cdf;
+            padding-left: 10px;
+            margin-top: 2em;
+        }
+        code {
+            background: #eaf1fb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        pre {
+            background: #eaf1fb;
+            padding: 1em;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 1em;
+        }
+        .section {
+            margin-bottom: 2em;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44,108,223,0.07);
+            padding: 1.5em;
+        }
+        ul, ol { margin-left: 1.5em; }
+        .git-logo {
+            display: block;
+            margin: 0 auto 1.5em auto;
+            width: 120px;
+            font-size: 64px;
+            text-align: center;
+        }
+        .tip {
+            background: #e3f7e3;
+            border-left: 4px solid #4caf50;
+            padding: 0.7em 1em;
+            margin: 1em 0;
+            border-radius: 6px;
+        }
+        a { color: #2d6cdf; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="git-logo">🐙</div>
     <h1>Git Guide</h1>
+
+```
+<div class="section">
+    <h2>1. What is Git?</h2>
+    <p>🔗 Git is a distributed version control system that helps you track changes in your code and collaborate with others.</p>
+</div>
+
+<div class="section">
+    <h2>2. Table of Contents</h2>
+    <ul>
+        <li>Features</li>
+        <li>Glossary</li>
+        <li>Installation</li>
+        <li>How to Use</li>
+        <li>Project Structure</li>
+        <li>Best Practices</li>
+        <li>Common Git Commands</li>
+        <li>Typical Workflow</li>
+        <li>Branching Strategies</li>
+        <li>Undoing Changes</li>
+        <li>Using .gitignore</li>
+        <li>Advanced Workflows</li>
+        <li>Troubleshooting</li>
+        <li>Contributing</li>
+        <li>FAQ</li>
+        <li>Popular Git GUI Tools</li>
+        <li>Helpful Resources</li>
+        <li>License</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>3. Features</h2>
+    <ul>
+        <li>Distributed version control</li>
+        <li>Branching and merging</li>
+        <li>Staging area</li>
+        <li>Data integrity</li>
+        <li>Support for non-linear development</li>
+        <li>Efficient handling of large projects</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>4. Glossary</h2>
+    <ul>
+        <li><b>Repository:</b> Project storage with version history</li>
+        <li><b>Commit:</b> A snapshot of your files at a point in time</li>
+        <li><b>Branch:</b> An independent line of development</li>
+        <li><b>Merge:</b> Combine changes from different branches</li>
+        <li><b>Stash:</b> Temporarily save changes not ready to commit</li>
+        <li><b>Tag:</b> A marker for a specific commit</li>
+        <li><b>Remote:</b> A version of your project hosted elsewhere</li>
+        <li><b>HEAD:</b> The current commit your working directory points to</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>5. Installation</h2>
+    <ol>
+        <li>Clone the repository: <code>git clone https://github.com/Keeran-Somai/GitHub-Actions---The-Complete-Guide.git</code></li>
+        <li>Navigate to the folder: <code>cd "GitHub Actions The Complete Guide/sectionOne"</code></li>
+        <li>Open <code>index.html</code> in your browser.</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>6. How to Use</h2>
+    <p>Open <code>index.html</code> to view the guide. Each section covers a key Git topic from beginner to advanced.</p>
+</div>
+
+<div class="section">
+    <h2>7. Using .gitignore</h2>
+    <p>The <code>.gitignore</code> file tells Git which files or folders to ignore in a project.</p>
+    <ul>
+        <li>Create a file named <code>.gitignore</code> in your project root.</li>
+        <li>Add patterns for files/folders you want Git to ignore.</li>
+        <li>Common patterns: <code>node_modules/</code>, <code>*.log</code>, <code>.env</code></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>8. Advanced Workflows</h2>
+    <ul>
+        <li><b>Interactive Rebase:</b> <code>git rebase -i HEAD~n</code></li>
+        <li><b>Stash:</b> <code>git stash</code></li>
+        <li><b>Cherry-pick:</b> <code>git cherry-pick &lt;commit&gt;</code></li>
+        <li><b>Bisect:</b> <code>git bisect start</code></li>
+        <li><b>Tagging:</b> <code>git tag v1.0.0</code></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>9. Troubleshooting</h2>
+    <ul>
+        <li><b>Merge Conflicts:</b> Resolve conflicts, then <code>git add</code> and <code>git commit</code>.</li>
+        <li><b>Detached HEAD:</b> Checkout a branch or create a new one.</li>
+        <li><b>Deleted Branch:</b> Recover with <code>git reflog</code>.</li>
+        <li><b>Untracked Files:</b> Check your <code>.gitignore</code> patterns.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>10. Contributing</h2>
+    <ol>
+        <li>Fork the repository</li>
+        <li>Create a new branch</li>
+        <li>Commit your changes</li>
+        <li>Open a pull request</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>11. FAQ</h2>
+    <ul>
+        <li><b>Undo last commit?</b> <code>git reset --soft HEAD~1</code> or <code>git reset --hard HEAD~1</code></li>
+        <li><b>Global ignore?</b> <code>git config --global core.excludesfile ~/.gitignore_global</code></li>
+        <li><b>Who changed a line?</b> <code>git blame &lt;file&gt;</code></li>
+        <li><b>Recover deleted branch?</b> <code>git reflog</code></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>12. Popular Git GUI Tools</h2>
+    <ul>
+        <li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+        <li><a href="https://www.gitkraken.com/" target="_blank">GitKraken</a></li>
+        <li><a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a></li>
+        <li><a href="https://git-scm.com/downloads/guis" target="_blank">More Git GUIs</a></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>13. Helpful Resources</h2>
+    <ul>
+        <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
+        <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
+        <li><a href="https://lab.github.com/" target="_blank">GitHub Learning Lab</a></li>
+        <li><a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>14. License</h2>
+    <p>This project is open source and free to use for educational purposes.</p>
+</div>
+
     <div class="section">
-        <h2>1. What is Git?</h2>
-        <p>
-            <span style="font-size:1.2em;vertical-align:middle;">🔗</span>
-            Git is a distributed version control system that helps you track changes in your code and collaborate with others.
-        </p>
+        <h2>15. GitHub Guide</h2>
+        <p>Learn more about GitHub features, collaboration, and workflows in the dedicated guide.</p>
+        <p style="text-align:center;margin-top:1em;"><a href="github.html">Go to GitHub Guide &rarr;</a></p>
     </div>
-    <div class="section">
-        <h2>Table of Contents</h2>
-        <ul>
-            <li>Features</li>
-            <li>Glossary</li>
-            <li>Installation</li>
-            <li>How to Use</li>
-            <li>Project Structure</li>
-            <li>Best Practices</li>
-            <li>Common Git Commands</li>
-            <li>Typical Workflow</li>
-            <li>Branching Strategies</li>
-            <li>Undoing Changes</li>
-            <li>Using .gitignore</li>
-            <li>Advanced Workflows</li>
-            <li>Troubleshooting</li>
-            <li>Contributing</li>
-            <li>FAQ</li>
-            <li>Popular Git GUI Tools</li>
-            <li>Helpful Resources</li>
-            <li>License</li>
-            <li>GitHub</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Features</h2>
-        <ul>
-            <li>Overview of Git and version control concepts</li>
-            <li>Step-by-step guide to common Git commands</li>
-            <li>Typical workflow examples for solo and team projects</li>
-            <li>Branching strategies for feature development and collaboration</li>
-            <li>Undoing changes and recovering lost work</li>
-            <li>Using <code>.gitignore</code> to manage ignored files</li>
-            <li>Advanced Git tips and tricks</li>
-            <li>Cheatsheet for quick reference</li>
-            <li>Troubleshooting common issues</li>
-            <li>Contribution guidelines</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Glossary</h2>
-        <ul>
-            <li><b>Repository:</b> A directory or storage space where your project lives.</li>
-            <li><b>Commit:</b> A snapshot of your files at a point in time.</li>
-            <li><b>Branch:</b> An independent line of development.</li>
-            <li><b>Merge:</b> Combine changes from different branches.</li>
-            <li><b>Stash:</b> Temporarily save changes not ready to commit.</li>
-            <li><b>Tag:</b> A marker for a specific commit, often used for releases.</li>
-            <li><b>Remote:</b> A version of your project hosted on the internet or network.</li>
-            <li><b>HEAD:</b> The current commit your working directory points to.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Installation</h2>
-        <ol>
-            <li>Clone this repository:<br><code>git clone https://github.com/Keeran-Somai/GitHub-Actions---The-Complete-Guide.git</code></li>
-            <li>Navigate to the <code>sectionOne</code> directory:<br><code>cd "GitHub Actions The Complete Guide/sectionOne"</code></li>
-            <li>Open <code>index.html</code> in your preferred web browser.</li>
-        </ol>
-    </div>
-    <div class="section">
-        <h2>How to Use</h2>
-        <p>Open <code>index.html</code> in your browser to view the guide. The guide is organized into sections covering everything from basic commands to advanced workflows. You can edit or extend the guide as needed for your team or personal use.</p>
-    </div>
-    <div class="section">
-        <h2>Project Structure</h2>
-        <ul>
-            <li><code>index.html</code> - Main HTML guide for Git usage</li>
-            <li><code>.gitignore</code> - Example ignore file for common patterns</li>
-            <li><code>README.md</code> - This documentation file</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Best Practices</h2>
-        <ul>
-            <li>Commit often with clear, descriptive messages.</li>
-            <li>Use branches for features, fixes, and experiments.</li>
-            <li>Pull and merge frequently to avoid conflicts.</li>
-            <li>Review code before merging to main branches.</li>
-            <li>Keep your repository clean by removing unused branches.</li>
-            <li>Use tags for releases and important milestones.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Glossary</h2>
-        <ul>
-            <li><b>Repository:</b> A directory or storage space where your project lives.</li>
-            <li><b>Commit:</b> A snapshot of your files at a point in time.</li>
-            <li><b>Branch:</b> An independent line of development.</li>
-            <li><b>Merge:</b> Combine changes from different branches.</li>
-            <li><b>Stash:</b> Temporarily save changes not ready to commit.</li>
-            <li><b>Tag:</b> A marker for a specific commit, often used for releases.</li>
-            <li><b>Remote:</b> A version of your project hosted on the internet or network.</li>
-            <li><b>HEAD:</b> The current commit your working directory points to.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Installation</h2>
-        <ol>
-            <li>Clone this repository:<br><code>git clone https://github.com/Keeran-Somai/GitHub-Actions---The-Complete-Guide.git</code></li>
-            <li>Navigate to the <code>sectionOne</code> directory:<br><code>cd "GitHub Actions The Complete Guide/sectionOne"</code></li>
-            <li>Open <code>index.html</code> in your preferred web browser.</li>
-        </ol>
-    </div>
-    <div class="section">
-        <h2>How to Use</h2>
-        <p>Open <code>index.html</code> in your browser to view the guide. The guide is organized into sections covering everything from basic commands to advanced workflows. You can edit or extend the guide as needed for your team or personal use.</p>
-    </div>
-    <div class="section">
-        <h2>Project Structure</h2>
-        <ul>
-            <li><code>index.html</code> - Main HTML guide for Git usage</li>
-            <li><code>.gitignore</code> - Example ignore file for common patterns</li>
-            <li><code>README.md</code> - This documentation file</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Best Practices</h2>
-        <ul>
-            <li>Commit often with clear, descriptive messages.</li>
-            <li>Use branches for features, fixes, and experiments.</li>
-            <li>Pull and merge frequently to avoid conflicts.</li>
-            <li>Review code before merging to main branches.</li>
-            <li>Keep your repository clean by removing unused branches.</li>
-            <li>Use tags for releases and important milestones.</li>
-        </ul>
-    </div>
-        <div class="section">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li>Features</li>
-                <li>Installation</li>
-                <li>How to Use</li>
-                <li>Project Structure</li>
-                <li>Common Git Commands</li>
-                <li>Branching Strategies</li>
-                <li>Undoing Changes</li>
-                <li>Using .gitignore</li>
-                <li>Advanced Workflows</li>
-                <li>Troubleshooting</li>
-                <li>Contributing</li>
-                <li>FAQ</li>
-                <li>Helpful Resources</li>
-                <li>License</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Features</h2>
-            <ul>
-                <li>Overview of Git and version control concepts</li>
-                <li>Step-by-step guide to common Git commands</li>
-                <li>Typical workflow examples for solo and team projects</li>
-                <li>Branching strategies for feature development and collaboration</li>
-                <li>Undoing changes and recovering lost work</li>
-                <li>Using <code>.gitignore</code> to manage ignored files</li>
-                <li>Advanced Git tips and tricks</li>
-                <li>Cheatsheet for quick reference</li>
-                <li>Troubleshooting common issues</li>
-                <li>Contribution guidelines</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Installation</h2>
-            <ol>
-                <li>Clone this repository:<br><code>git clone https://github.com/Keeran-Somai/GitHub-Actions---The-Complete-Guide.git</code></li>
-                <li>Navigate to the <code>sectionOne</code> directory:<br><code>cd "GitHub Actions The Complete Guide/sectionOne"</code></li>
-                <li>Open <code>index.html</code> in your preferred web browser.</li>
-            </ol>
-        </div>
-        <div class="section">
-            <h2>How to Use</h2>
-            <p>Open <code>index.html</code> in your browser to view the guide. The guide is organized into sections covering everything from basic commands to advanced workflows. You can edit or extend the guide as needed for your team or personal use.</p>
-        </div>
-        <div class="section">
-            <h2>Project Structure</h2>
-            <ul>
-                <li><code>index.html</code> - Main HTML guide for Git usage</li>
-                <li><code>.gitignore</code> - Example ignore file for common patterns</li>
-                <li><code>README.md</code> - This documentation file</li>
-            </ul>
-        </div>
-    <div class="section">
-        <h2>Common Git Commands</h2>
-        <table style="width:100%;border-collapse:collapse;">
-            <thead>
-                <tr style="background:#eaf1fb;">
-                    <th style="text-align:left;padding:6px;">Command</th>
-                    <th style="text-align:left;padding:6px;">Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td><code>git init</code></td><td>Initialize a new Git repository</td></tr>
-                <tr><td><code>git clone &lt;url&gt;</code></td><td>Clone a remote repository</td></tr>
-                <tr><td><code>git status</code></td><td>Show the working directory status</td></tr>
-                <tr><td><code>git add &lt;file&gt;</code></td><td>Stage changes for commit</td></tr>
-                <tr><td><code>git commit -m "message"</code></td><td>Commit staged changes</td></tr>
-                <tr><td><code>git log</code></td><td>View commit history</td></tr>
-                <tr><td><code>git branch</code></td><td>List branches</td></tr>
-                <tr><td><code>git checkout &lt;branch&gt;</code></td><td>Switch branches</td></tr>
-                <tr><td><code>git merge &lt;branch&gt;</code></td><td>Merge a branch into current</td></tr>
-                <tr><td><code>git pull</code></td><td>Fetch and merge from remote</td></tr>
-                <tr><td><code>git push</code></td><td>Push changes to remote</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="section">
-        <h2>Typical Workflow</h2>
-        <ol>
-            <li>Make changes to your files.</li>
-            <li>Stage changes: <code>git add .</code></li>
-            <li>Commit changes: <code>git commit -m "Describe your changes"</code></li>
-            <li>Push to remote: <code>git push</code></li>
-        </ol>
-        <div class="tip">Tip: Use <code>git status</code> often to see what’s going on!</div>
-    </div>
-    <div class="section">
-        <h2>Branching Strategies</h2>
-        <ul>
-            <li><b>Feature Branches:</b> Create a branch for each new feature or bugfix.</li>
-            <li><b>Main/Development Branches:</b> Keep <code>main</code> or <code>master</code> stable; use <code>develop</code> for ongoing work.</li>
-            <li><b>Pull Requests:</b> Merge changes via pull requests for code review.</li>
-            <li><b>Release Branches:</b> Prepare releases in dedicated branches.</li>
-        </ul>
-        <div class="tip">Example: <code>git checkout -b feature/my-new-feature</code></div>
-    </div>
-    <div class="section">
-        <h2>Undoing Changes</h2>
-        <ul>
-            <li>Unstage a file: <code>git reset &lt;file&gt;</code></li>
-            <li>Discard changes: <code>git checkout -- &lt;file&gt;</code></li>
-            <li>Amend last commit: <code>git commit --amend</code></li>
-            <li>Recover lost commits: <code>git reflog</code></li>
-        </ul>
-        <div class="tip">Trick: Use <code>git reflog</code> to recover lost commits!</div>
-    </div>
-    <div class="section">
-        <h2>3. Typical Workflow</h2>
-        <ol>
-            <li>Make changes to your files.</li>
-            <li>Stage changes: <code>git add .</code></li>
-            <li>Commit changes: <code>git commit -m "Describe your changes"</code></li>
-            <li>Push to remote: <code>git push</code></li>
-        </ol>
-    <div class="tip">Tip: Use <code>git status</code> often to see what’s going on!</div>
-    </div>
-    <div class="section">
-        <h2>4. Working with Branches</h2>
-        <ul>
-            <li>Create a branch: <code>git branch feature-branch</code></li>
-            <li>Switch to branch: <code>git checkout feature-branch</code></li>
-            <li>Merge branch: <code>git checkout main</code> then <code>git merge feature-branch</code></li>
-        </ul>
-    <!-- Branch model illustration removed for compatibility -->
-            <h2>Branching Strategies</h2>
-            <ul>
-                <li><b>Feature Branches:</b> Create a branch for each new feature or bugfix.</li>
-                <li><b>Main/Development Branches:</b> Keep <code>main</code> or <code>master</code> stable; use <code>develop</code> for ongoing work.</li>
-                <li><b>Pull Requests:</b> Merge changes via pull requests for code review.</li>
-                <li><b>Release Branches:</b> Prepare releases in dedicated branches.</li>
-            </ul>
-            <div class="tip">Example: <code>git checkout -b feature/my-new-feature</code></div>
-        </div>
-    <div class="section">
-        <h2>5. Undoing Changes</h2>
-        <ul>
-            <li>Unstage a file: <code>git reset &lt;file&gt;</code></li>
-            <li>Discard changes: <code>git checkout -- &lt;file&gt;</code></li>
-            <li>Amend last commit: <code>git commit --amend</code></li>
-        </ul>
-    <div class="tip">Trick: Use <code>git reflog</code> to recover lost commits!</div>
-            <h2>Undoing Changes</h2>
-            <ul>
-                <li>Unstage a file: <code>git reset &lt;file&gt;</code></li>
-                <li>Discard changes: <code>git checkout -- &lt;file&gt;</code></li>
-                <li>Amend last commit: <code>git commit --amend</code></li>
-                <li>Recover lost commits: <code>git reflog</code></li>
-            </ul>
-            <div class="tip">Trick: Use <code>git reflog</code> to recover lost commits!</div>
-        </div>
-    <div class="section">
-        <h2>6. Using .gitignore</h2>
-        <p>The <code>.gitignore</code> file tells Git which files or folders to ignore in a project. This is useful for excluding files like build output, logs, or sensitive information.</p>
-        <pre>
-# Example .gitignore
-node_modules/
-dist/
-*.log
-.env
-        </pre>
-        <ul>
-            <li>Create a file named <code>.gitignore</code> in your project root.</li>
-            <li>Add patterns for files/folders you want Git to ignore.</li>
-            <li>Common patterns: <code>node_modules/</code>, <code>*.log</code>, <code>.env</code></li>
-        </ul>
-    <!-- gitignore icon removed for compatibility -->
-            <h2>Using .gitignore</h2>
-            <p>The <code>.gitignore</code> file tells Git which files or folders to ignore in a project. This is useful for excluding files like build output, logs, or sensitive information.</p>
-            <pre>
-        <div class="section">
-            <h2>Using .gitignore</h2>
-            <p>The <code>.gitignore</code> file tells Git which files or folders to ignore in a project. This is useful for excluding files like build output, logs, or sensitive information.</p>
-            <pre>
-    node_modules/
-    *.log
-    .env
-            </pre>
-            <ul>
-                <li>Create a file named <code>.gitignore</code> in your project root.</li>
-                <li>Add patterns for files/folders you want Git to ignore.</li>
-                <li>Common patterns: <code>node_modules/</code>, <code>*.log</code>, <code>.env</code></li>
-            </ul>
-        </div>
-    <div class="section">
-        <h2>Advanced Workflows</h2>
-        <ul>
-            <li><b>Interactive Rebase:</b> <code>git rebase -i HEAD~n</code> to edit, squash, or reorder commits</li>
-            <li><b>Stash Changes:</b> <code>git stash</code> to save work-in-progress</li>
-            <li><b>Cherry-pick:</b> <code>git cherry-pick &lt;commit&gt;</code> to apply a specific commit</li>
-            <li><b>Bisect:</b> <code>git bisect start</code> to find the commit that introduced a bug</li>
-            <li><b>Tagging:</b> <code>git tag v1.0.0</code> to create a tag</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Troubleshooting</h2>
-        <ul>
-            <li><b>Merge Conflicts:</b> Resolve conflicts in files, then run <code>git add &lt;file&gt;</code> and <code>git commit</code>.</li>
-            <li><b>Detached HEAD:</b> Checkout a branch or create a new one to save changes.</li>
-            <li><b>Accidentally Deleted Branch:</b> Recover with <code>git reflog</code> and <code>git checkout -b &lt;branch&gt; &lt;commit&gt;</code>.</li>
-            <li><b>Untracked Files Not Ignored:</b> Check <code>.gitignore</code> patterns and file locations.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Contributing</h2>
-        <ol>
-            <li>Fork the repository</li>
-            <li>Create a new branch for your feature or fix</li>
-            <li>Commit your changes with clear messages</li>
-            <li>Open a pull request describing your changes</li>
-        </ol>
-    </div>
-    <div class="section">
-        <h2>FAQ</h2>
-        <ul>
-            <li><b>How do I undo my last commit?</b> Use <code>git reset --soft HEAD~1</code> to keep changes staged, or <code>git reset --hard HEAD~1</code> to discard them.</li>
-            <li><b>How do I ignore files in all my projects?</b> Set up a global <code>.gitignore</code> with:<br><code>git config --global core.excludesfile ~/.gitignore_global</code></li>
-            <li><b>How do I see who changed a line?</b> Use <code>git blame &lt;file&gt;</code>.</li>
-            <li><b>How do I recover a deleted branch?</b> Use <code>git reflog</code> to find the commit and recreate the branch.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Popular Git GUI Tools</h2>
-        <ul>
-            <li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> - Simple desktop client for Git and GitHub.</li>
-            <li><a href="https://www.gitkraken.com/" target="_blank">GitKraken</a> - Powerful cross-platform Git GUI.</li>
-            <li><a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a> - Free Git client for Windows and Mac.</li>
-            <li><a href="https://git-scm.com/downloads/guis" target="_blank">More Git GUIs</a> - Official list of Git GUI tools.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Helpful Resources</h2>
-        <ul>
-            <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
-            <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
-            <li><a href="https://lab.github.com/" target="_blank">GitHub Learning Lab</a></li>
-            <li><a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a></li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>License</h2>
-        <p>This project is open source and free to use for educational purposes.</p>
-    </div>
-    <div class="section">
-        <h2>GitHub</h2>
-        <p>GitHub is a web-based platform for hosting and collaborating on Git repositories. It offers features for code review, issue tracking, project management, and more.</p>
-        <ul>
-            <li><b>Repositories:</b> Host and manage your code projects.</li>
-            <li><b>Pull Requests:</b> Propose, review, and merge changes.</li>
-            <li><b>Issues:</b> Track bugs, tasks, and feature requests.</li>
-            <li><b>Actions:</b> Automate workflows with CI/CD.</li>
-            <li><b>Projects:</b> Organize work with Kanban boards.</li>
-            <li><b>Wiki:</b> Document your project.</li>
-            <li><b>GitHub Pages:</b> Host static websites directly from your repo.</li>
-        </ul>
-        <p style="text-align:center;margin-top:1em;"><a href="github.html">Learn more about GitHub &rarr;</a></p>
-    </div>
-            <ul>
-                <li>Create a file named <code>.gitignore</code> in your project root.</li>
-                <li>Add patterns for files/folders you want Git to ignore.</li>
-                <li>Common patterns: <code>node_modules/</code>, <code>*.log</code>, <code>.env</code></li>
-            </ul>
-        </div>
-    <div class="section">
-    <h2>7. Helpful Resources</h2>
-        <ul>
-            <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
-            <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
-        </ul>
-    </div>
-        <h2>Advanced Workflows</h2>
-        <ul>
-            <li><b>Interactive Rebase:</b> <code>git rebase -i HEAD~n</code> to edit, squash, or reorder commits</li>
-            <li><b>Stash Changes:</b> <code>git stash</code> to save work-in-progress</li>
-            <li><b>Cherry-pick:</b> <code>git cherry-pick &lt;commit&gt;</code> to apply a specific commit</li>
-            <li><b>Bisect:</b> <code>git bisect start</code> to find the commit that introduced a bug</li>
-            <li><b>Tagging:</b> <code>git tag v1.0.0</code> to create a tag</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Troubleshooting</h2>
-        <ul>
-            <li><b>Merge Conflicts:</b> Resolve conflicts in files, then run <code>git add &lt;file&gt;</code> and <code>git commit</code>.</li>
-            <li><b>Detached HEAD:</b> Checkout a branch or create a new one to save changes.</li>
-            <li><b>Accidentally Deleted Branch:</b> Recover with <code>git reflog</code> and <code>git checkout -b &lt;branch&gt; &lt;commit&gt;</code>.</li>
-            <li><b>Untracked Files Not Ignored:</b> Check <code>.gitignore</code> patterns and file locations.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Contributing</h2>
-        <ol>
-            <li>Fork the repository</li>
-            <li>Create a new branch for your feature or fix</li>
-            <li>Commit your changes with clear messages</li>
-            <li>Open a pull request describing your changes</li>
-        </ol>
-    </div>
-    <div class="section">
-        <h2>FAQ</h2>
-        <ul>
-            <li><b>How do I undo my last commit?</b> Use <code>git reset --soft HEAD~1</code> to keep changes staged, or <code>git reset --hard HEAD~1</code> to discard them.</li>
-            <li><b>How do I ignore files in all my projects?</b> Set up a global <code>.gitignore</code> with:<br><code>git config --global core.excludesfile ~/.gitignore_global</code></li>
-            <li><b>How do I see who changed a line?</b> Use <code>git blame &lt;file&gt;</code>.</li>
-            <li><b>How do I recover a deleted branch?</b> Use <code>git reflog</code> to find the commit and recreate the branch.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Helpful Resources</h2>
-        <ul>
-            <li><a href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
-            <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
-            <li><a href="https://lab.github.com/" target="_blank">GitHub Learning Lab</a></li>
-            <li><a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a></li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>License</h2>
-        <p>This project is open source and free to use for educational purposes.</p>
-    </div>
+
+
 </body>
+</html>
 
-    <div class="section">
-    <h2>8. Advanced Git</h2>
-        <ul>
-            <li><b>Interactive Rebase:</b> <code>git rebase -i HEAD~n</code> (edit last n commits)</li>
-            <li><b>Stash changes:</b> <code>git stash</code> (save changes temporarily)</li>
-            <li><b>Apply stash:</b> <code>git stash apply</code></li>
-            <li><b>Cherry-pick:</b> <code>git cherry-pick &lt;commit&gt;</code> (apply a specific commit)</li>
-            <li><b>Squash commits:</b> Use interactive rebase to squash multiple commits into one</li>
-            <li><b>Bisect:</b> <code>git bisect start</code> (find the commit that introduced a bug)</li>
-            <li><b>Tagging:</b> <code>git tag v1.0.0</code> (create a tag)</li>
-            <li><b>Show remote URLs:</b> <code>git remote -v</code></li>
-        </ul>
-    <!-- Advanced cheat sheet image removed for compatibility -->
-    </div>
-
-    <div class="section">
-    <h2>9. Tips & Tricks</h2>
-        <ul>
-            <li><b>See what changed in last commit:</b> <code>git show</code></li>
-            <li><b>See changes before committing:</b> <code>git diff</code></li>
-            <li><b>See changes for staged files:</b> <code>git diff --cached</code></li>
-            <li><b>Remove untracked files:</b> <code>git clean -fd</code></li>
-            <li><b>Rename a branch:</b> <code>git branch -m new-name</code></li>
-            <li><b>Set upstream branch:</b> <code>git push -u origin branch-name</code></li>
-            <li><b>List all aliases:</b> <code>git config --get-regexp alias</code></li>
-        </ul>
-    <div class="tip">Tip: Use <code>git log --oneline --graph --all</code> for a visual commit history!</div>
-    </div>
-
-    <div class="section">
-    <h2>10. Git Cheatsheet</h2>
-        <pre>
-# Quick Reference
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
-git log --oneline --graph --all
-git diff branch1..branch2
-git reflog
-git blame &lt;file&gt;
-git shortlog -sn
-git archive -o latest.zip HEAD
-        </pre>
-    <!-- Cheatsheet image removed for compatibility -->
-    </div>
 </body>
 </body>
 </html>
