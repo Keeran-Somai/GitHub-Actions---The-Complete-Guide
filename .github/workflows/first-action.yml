@@ -1,11 +1,36 @@
-name: First Workflow 
-on: workflow_dispatch
+name: Advanced Greeting Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Your name"
+        required: true
+        default: "Developer"
+
 jobs:
-  first-job:
-    runs-on:ubuntu-latest
+  greet:
+    runs-on: ubuntu-latest
+    outputs:
+      farewell: ${{ steps.goodbye.outputs.message }}
+
     steps:
-      -name: Print greeting
-        run: echo "Hello World!"
-      -name: Print goodbye
-        run: echo "Done - bye!"
-        
+      - name: Print fancy greeting
+        env:
+          USER_NAME: ${{ github.event.inputs.name }}
+        run: |
+          echo "👋 Hello, $USER_NAME!"
+          echo "🌍 Welcome to your first GitHub Actions workflow!"
+          echo "🕒 The current time is $(date)"
+          echo "🚀 Let's get started!"
+      
+      - name: Set farewell message
+        id: goodbye
+        run: echo "message=👋 Goodbye, ${{ github.event.inputs.name }}! Workflow finished successfully 🎉" >> $GITHUB_OUTPUT
+
+  summary:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display farewell message
+        run: echo "${{ needs.greet.outputs.farewell }}"
