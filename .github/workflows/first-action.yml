@@ -1,4 +1,4 @@
-name: Advanced Greeting Workflow
+name: Second github action
 
 on:
   workflow_dispatch:
